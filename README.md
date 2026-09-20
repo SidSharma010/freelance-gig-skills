@@ -76,3 +76,43 @@ falls apart the moment a client asks a follow-up question.
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## Checking a draft before you send it
+
+`proposal-writer` follows hard rules against generic openers and invented
+specifics, but rules in a prompt aren't a guarantee. Before sending a real
+proposal, run it through the mechanical checker:
+
+```bash
+python lib/check_proposal.py --platform upwork my-draft.txt
+```
+
+It flags length problems and known template phrases. It does not judge
+whether the pitch is actually good — that's still on you. `examples/`
+has a worked weak-vs-strong comparison to calibrate against.
+
+## Repo structure
+
+```
+freelance-gig-skills/
+├── skills/
+│   ├── proposal-writer/SKILL.md
+│   ├── portfolio-optimizer/SKILL.md
+│   ├── pricing-advisor/SKILL.md
+│   └── followup-drafter/SKILL.md
+├── references/
+│   ├── platform-formats.md      (shared platform specs, single source of truth)
+│   └── pricing-benchmarks.md    (illustrative rate bands, not live data)
+├── lib/
+│   └── check_proposal.py        (mechanical draft checker, no dependencies)
+└── examples/
+    └── upwork-example.md        (worked weak vs. strong proposal)
+```
+
+## Status
+
+This is a new, unproven bundle — not yet tested against real job posts at
+volume. The structure and hard rules are deliberate (modeled on a proven
+pattern), but "will this actually win more jobs" hasn't been validated.
+If you use it and something reads generic or wrong, that's the signal to
+fix — open an issue or edit the relevant SKILL.md directly.
