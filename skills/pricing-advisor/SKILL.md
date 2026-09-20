@@ -77,3 +77,10 @@ just a number, so the user can defend it if a client pushes back.
 3. Suggested range: floor and target, with reasoning for each
 4. One platform-specific note (fee impact, milestone structure, tier
    framing) relevant to where they're pricing this
+
+## Resources
+
+- `../../references/pricing-benchmarks.md` — rough experience-tier bands
+  and reasoning for fixed-price vs. hourly. Read its honesty note first:
+  these are illustrative orientation bands, not live market data — never
+  state a figure from this file as if it were a verified current rate.
