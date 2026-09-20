@@ -109,3 +109,17 @@ actually read the job post — not a template with the client's name pasted in.
 4. If no real supporting detail was given, a note saying so plainly rather
    than silently filling the gap
 
+
+## Resources
+
+- `../../references/platform-formats.md` — consolidated platform specs
+  (length norms, fee structure, client-visibility notes) — keep this file
+  as the source of truth if platform details ever need updating, rather
+  than editing the per-platform notes above and here separately.
+- `../../lib/check_proposal.py` — run a finished draft through this before
+  sending: `python lib/check_proposal.py --platform upwork draft.txt`. It
+  mechanically checks length and flags banned template phrases. It does
+  not replace reading the draft yourself.
+- `../../examples/upwork-example.md` — a worked weak-vs-strong example.
+  Use it as a quality bar: a real draft that reads closer to the weak
+  example than the strong one means this skill needs tightening.
